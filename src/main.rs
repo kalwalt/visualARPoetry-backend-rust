@@ -22,7 +22,7 @@ fn main() {
     draw_filled_circle_mut(&mut img, (150, 150), 150, red);
     draw_hollow_rect_mut(&mut img, Rect::at(60, 10).of_size(250, 200), white);
 
-    Graphics::draw_rects(&mut img, 40);
+    Graphics::draw_rects(&mut img, 40, white);
     println!("Circle drawn!");
     img.save("imgs/visual_poetry.jpg");
     println!("Image saved");
