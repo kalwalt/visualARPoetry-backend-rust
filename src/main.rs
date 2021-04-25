@@ -26,6 +26,7 @@ fn main() {
     println!("Circle drawn!");
     Graphics::draw_rects(&mut img, 60, 10, 250, 200, 40, white);
     println!("Rects drawn!");
+    Graphics::recursive_lines_x(&mut img, 20.0, 320, 20, 10, 200, red, true);
     img.save("imgs/visual_poetry.jpg");
     println!("Image saved");
 }
