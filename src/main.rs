@@ -27,6 +27,7 @@ fn main() {
     Graphics::draw_rects(&mut img, 60, 10, 250, 200, 40, white);
     println!("Rects drawn!");
     Graphics::recursive_lines_x(&mut img, 20.0, 320, 20, 10, 200, red);
+    Graphics::recursive_lines_y(&mut img, 20.0, 320, 20, 10, 200, red);
     img.save("imgs/visual_poetry.jpg").ok();
     println!("Image saved");
 }
