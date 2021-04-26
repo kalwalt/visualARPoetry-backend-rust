@@ -11,9 +11,9 @@ impl Graphics {
         }
     }
 
-    pub fn recursive_lines_x(canvas: &mut RgbImage, start: f32, line_width: u32, start_x: u32, spacing: u32, number_lines: u32, color: Rgb<u8>, rand: bool) {
+    pub fn recursive_lines_x(canvas: &mut RgbImage, start: f32, line_width: u32, start_x: u32, spacing: u32, number_lines: u32, color: Rgb<u8>) {
         let factor = number_lines * spacing;
-        for x in start_x..factor {
+        for x in (start_x..factor).step_by(spacing as usize) {
             draw_line_segment_mut(canvas, (x as f32, start as f32), (x as f32, start as f32 + line_width as f32), color);
         };
     }
