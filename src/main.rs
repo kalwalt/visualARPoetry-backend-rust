@@ -33,6 +33,7 @@ fn main() {
     println!("Rects drawn!");
     Graphics::recursive_lines_x(&mut img, 20.0, 320, 20, 10, 200, red);
     Graphics::recursive_lines_y(&mut img, 20.0, 320, 20, 10, 200, red);
+    Utils::get_random_int_inclusive(0, 100);
     img.save("imgs/visual_poetry.jpg").ok();
     println!("Image saved");
 }
