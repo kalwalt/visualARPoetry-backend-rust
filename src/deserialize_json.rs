@@ -33,8 +33,13 @@ impl Deserializer  {
                 "+44 2345678"
             ]
         }"#;
+        
         let json: serde_json::Value =
         serde_json::from_str(the_file).expect("JSON was not well-formatted");
-        println!("{:?}", json)
+        println!("{:?}", json);
+        println!("Printing Address object...\n");
+        println!("{:?}", json["Address"]);
+        println!("Continuing...\n");
+        println!("City is {}", json["Address"]["City"]);
     }
 }
