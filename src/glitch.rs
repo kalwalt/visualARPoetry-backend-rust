@@ -11,7 +11,7 @@ fn clamp(val: i16, min: i16, max: i16) -> i16 {
 }
 
 impl Glitch {
-    pub fn glitching(filename: String) {
+    pub fn glitching_file(filename: String) {
         let mut buf = image::open(&Path::new(&filename)).unwrap().to_rgb8();
         println!("dimensions {:?}", buf.dimensions());
     
@@ -35,8 +35,8 @@ impl Glitch {
             
                 let srcx = clamp((x as i16) + xoff, 0, (w - 1) as i16);
                 let srcy = clamp((y as i16) + yoff, 0, (h - 1) as i16);
-                let srcpx = buf[(srcx as u32, srcy as u32)];
-                buf.put_pixel(x, y, srcpx);
+                let src_pixel = buf[(srcx as u32, srcy as u32)];
+                buf.put_pixel(x, y, src_pixel);
             }
         }
         let out_filename = format!("{}.rg.png", filename);
