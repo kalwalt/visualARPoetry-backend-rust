@@ -42,4 +42,5 @@ fn main() {
     Glitch::glitching_file("imgs/fishes.jpg".to_string(), 100, 500);
     Glitch::glitching_buf(&mut img, 20, 200).save("imgs/visual_poetry_glitch.jpg").ok();
     println!("Image visual_poetry_glitch.jpg saved");
+    println!("End");
 }
