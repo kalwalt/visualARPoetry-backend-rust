@@ -38,6 +38,7 @@ fn main() {
     Graphics::recursive_lines_y(&mut img, 20.0, 320, 20, 10, 200, red);
     Utils::get_random_int_inclusive(0, 100);
     Glitch::glitching_file("imgs/fishes.jpg".to_string());
+    Glitch::glitching_buf(&mut img).save("imgs/visual_poetry_glitch.jpg").ok();
     img.save("imgs/visual_poetry.jpg").ok();
     println!("Image saved");
 }
