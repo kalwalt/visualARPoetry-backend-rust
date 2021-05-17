@@ -39,7 +39,7 @@ fn main() {
     Utils::get_random_int_inclusive(0, 100);
     img.save("imgs/visual_poetry.jpg").ok();
     println!("Image visual_poetry.jpg saved");
-    Glitch::glitching_file("imgs/fishes.jpg".to_string());
-    Glitch::glitching_buf(&mut img).save("imgs/visual_poetry_glitch.jpg").ok();
+    Glitch::glitching_file("imgs/fishes.jpg".to_string(), 100, 500);
+    Glitch::glitching_buf(&mut img, 20, 200).save("imgs/visual_poetry_glitch.jpg").ok();
     println!("Image visual_poetry_glitch.jpg saved");
 }
