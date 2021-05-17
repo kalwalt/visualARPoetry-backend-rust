@@ -11,6 +11,9 @@ use crate::utils::Utils;
 mod deserialize_json;
 use crate::deserialize_json::Deserializer;
 
+mod glitch;
+use crate::glitch::Glitch;
+
 fn main() {
     let image_path = match env::args().nth(1) {
         Some(path) => path,
@@ -34,6 +37,7 @@ fn main() {
     Graphics::recursive_lines_x(&mut img, 20.0, 320, 20, 10, 200, red);
     Graphics::recursive_lines_y(&mut img, 20.0, 320, 20, 10, 200, red);
     Utils::get_random_int_inclusive(0, 100);
+    Glitch::glitching_file("imgs/fishes.jpg".to_string());
     img.save("imgs/visual_poetry.jpg").ok();
     println!("Image saved");
 }
